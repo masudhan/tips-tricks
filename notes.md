@@ -1,5 +1,5 @@
 For traefik deployment,
-
+```
 first add the helm chart
 show values
 add the trusted ips of vpc and add annotation for nlb
@@ -9,8 +9,8 @@ k create deploy web-server...
 k expose --port 80
 k create ingressroute
 check it in browser
-
-
+```
+`
 For jenkins
 
 ```
