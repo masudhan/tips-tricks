@@ -1,3 +1,5 @@
+### I would recommend to use AMD or Intel processor, I tested on ARM processor and this script is not working as expected
+
 Create a file called script.sh and add these bash script into that,
 ```
 #!/usr/bin/sh
@@ -42,7 +44,7 @@ Above script will install erlang 25
 
 Next, we need to install rabbitmq, 
 
-To install rabbitmq specific versionn of rabbitmq,
+To install rabbitmq specific version of rabbitmq,
 
 ```
 wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.11.1/rabbitmq-server_3.11.1-1_all.deb
