@@ -78,3 +78,4 @@ rabbitmqctl set_user_tags <username> administrator
 ```
 
 
+source: [Rabbitmq](https://www.rabbitmq.com/download.html)
