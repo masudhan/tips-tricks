@@ -15,6 +15,10 @@ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 cp $DOCKER_CONFIG/cli-plugins/docker-compose /usr/local/bin
 docker compose version or docker-compose version
 
+usermod -aG docker $USER 
+su - $USER
+
+
 Run jenkins on docker:
 ----------------------
 
