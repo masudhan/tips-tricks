@@ -20,6 +20,12 @@ Now get into mongo-1 which is primary (step down this instance that the mongod i
 Now if we get into mongo-3 it'll be primary
 
 -------------------------------------------------
+How to add new replicaset?
+  In primary,
+    rs.add("172.16.16.250:27017")
+    rs.printSlaveReplicationInfo()
+
+-------------------------------------------------
 How to remove replicaset?
 1. Get into secondary instances 
   use admin;
