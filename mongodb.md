@@ -30,3 +30,5 @@ How to remove replicaset?
   rs.remove("172.16.16.200:27017")
 
 ```
+
+https://www.mongodb.com/docs/v4.2/tutorial/force-member-to-be-primary/
