@@ -17,5 +17,9 @@
 
 `sudo apt autoclean`
 
+`sudo apt-add-repository -r ppa:certbot/certbot`
+
+after that `sudo apt update` `sudo apt-get update`
+
 
 
