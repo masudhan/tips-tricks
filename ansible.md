@@ -12,3 +12,7 @@ ansible-playbook -u deamonkiller -i inventories/production playbooks/misc.yml --
   debug:
     msg: "deb_architecture.stdout: {{ deb_architecture.stdout }}"
 ```
+
+**Bastion to private instance from local? Add below code in inventory file**
+
+`ansible_ssh_common_args="-o ProxyCommand='ssh -i /home/deamonkillerM/.ssh/id_rsa -W %h:%p madhu@111.22.12.29'"`
