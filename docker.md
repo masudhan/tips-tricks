@@ -18,6 +18,10 @@ docker compose version or docker-compose version
 usermod -aG docker $USER 
 su - $USER
 
+or
+
+sudo apt install docker.io docker-compose -y
+
 
 Run jenkins on docker:
 ----------------------
