@@ -2,11 +2,11 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: deployment-restart-rolebinding
-  namespace: eiffeltower
+  namespace: infra
 subjects:
 - kind: ServiceAccount
   name: cronjob-sa
-  namespace: eiffeltower
+  namespace: infra
 roleRef:
   kind: Role
   name: deployment-restart-role

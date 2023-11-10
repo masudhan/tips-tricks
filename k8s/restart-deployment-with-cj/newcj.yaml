@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: restart-eiffeltower-deployment
+  namespace: infra
+spec:
+  schedule: "*/1 * * * *"  # This runs daily at midnight, adjust as needed
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: cronjob-sa  # Make sure this service account has the necessary permissions
+          containers:
+          - name: kubectl-container
+            image: bitnami/kubectl:latest  # Using a public image with kubectl
+            command:
+            - "/bin/bash"
+            - "-c"
+            - >
+              kubectl rollout restart deployment/eiffeltower -n eiffeltower &&
+              kubectl rollout restart deployment/eiffeltower -n tajmahal &&
+              kubectl rollout restart deployment/eiffeltower -n greatwall &&
+              kubectl rollout restart deployment/eiffeltower -n liberty 
+          restartPolicy: OnFailure
