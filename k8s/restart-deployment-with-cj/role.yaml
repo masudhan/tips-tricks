@@ -7,3 +7,4 @@ rules:
 - apiGroups: ["apps"]
   resources: ["deployments"]
   verbs: ["get", "list", "watch", "update", "patch"]
+  resourcesNames: ["idp"]
