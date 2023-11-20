@@ -21,5 +21,7 @@
 
 after that `sudo apt update` `sudo apt-get update`
 
+**Useful Packages**
 
+`sudo apt install bat` - usage `batcat file.py`
 
