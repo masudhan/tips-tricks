@@ -91,6 +91,10 @@ except botocore.exceptions.ClientError as e:
         
  ```
 
+if virtualbox is not able to ping or connect to the internet we need to use below command and create an active connection and select the network and then activate
+nmcli -d
+nmtui
+
 
 
 
