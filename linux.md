@@ -25,3 +25,12 @@ after that `sudo apt update` `sudo apt-get update`
 
 `sudo apt install bat` - usage `batcat file.py`
 
+**Resize root partition**
+
+`sudo apt install cloud-guest-utils`
+
+`sudo growpart /dev/xvda 1`
+
+`sudo resize2fs /dev/xvda1`
+
+`df -hT`
