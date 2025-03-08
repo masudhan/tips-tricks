@@ -95,6 +95,10 @@ if virtualbox is not able to ping or connect to the internet we need to use belo
 nmcli -d
 nmtui
 
+`aws s3api create-bucket \
+    --bucket ms-s3-tst-$RANDOM \
+    --region us-west-2 \
+    --create-bucket-configuration LocationConstraint=us-west-2`
 
 
 
