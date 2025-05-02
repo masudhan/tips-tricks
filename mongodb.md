@@ -38,3 +38,14 @@ How to remove replicaset?
 ```
 
 https://www.mongodb.com/docs/v4.2/tutorial/force-member-to-be-primary/
+
+var data = JSON.parse(cat('local json file name'));
+
+data = data.map(doc => {
+    if (doc._id && doc._id.$oid) {
+        doc._id = ObjectId(doc._id.$oid);
+    }
+    return doc;
+});
+
+db.collectionName.insertMany(data);
