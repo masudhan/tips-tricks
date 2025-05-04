@@ -34,3 +34,25 @@ after that `sudo apt update` `sudo apt-get update`
 `sudo resize2fs /dev/xvda1`
 
 `df -hT`
+
+**Create user in linux**
+
+`sudo useradd -m -s /bin/bash madhu`
+
+`sudo passwd madhu`
+
+`sudo usermod -aG sudo madhu` #Give sudo privileges
+
+`sudo usermod -aG docker madhu` #Add to docker group
+
+***Add user to sudoers(if not already in sudo group)***
+
+`sudo visudo`
+
+`madhu ALL=(ALL:ALL) ALL`
+
+`sudo -l` #Check sudo access
+
+`sudo userdel -r madhu` # -r = remove home directory too
+
+
