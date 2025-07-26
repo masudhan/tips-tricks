@@ -41,7 +41,7 @@ https://www.mongodb.com/docs/v4.2/tutorial/force-member-to-be-primary/
 
 var data = JSON.parse(cat('local json file name'));
 
-data = data.map(doc => {
+data = data.map(doc = {
     if (doc._id && doc._id.$oid) {
         doc._id = ObjectId(doc._id.$oid);
     }
@@ -54,13 +54,13 @@ db.collectionName.insertMany(data);
 
 mongo dump and restore
 
-nohup mongodump --uri "mongodb://<username>:<password>@<hostname>:27017/?authSource=<db>&tls=true" \
+nohup mongodump --uri "mongodb://username:password@hostname:27017/?authSource=db&tls=true" \
           --collection dummy_cv_do_not_use_1_1_0 \
-          --db <dbname> \
+          --db dbname \
           --out /root/dump \
-          > /root/dump/dump.log 2>&1 &
+           /root/dump/dump.log 2&1 &
 
-nohup mongodump --uri "mongodb://<username>:<password>@<hostname>:27017/<dbname>?authSource=<dbname>&tls=true" \
+nohup mongodump --uri "mongodb://username:password@hostname:27017/dbname?authSource=dbname&tls=true" \
           --collection dummy_cv_do_not_use_1_1_0 \
           --out /root/madhu \
-          > /root/madhu/dump.log 2>&1 &          
+           /root/madhu/dump.log 2&1 &          
