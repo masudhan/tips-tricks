@@ -49,3 +49,18 @@ data = data.map(doc => {
 });
 
 db.collectionName.insertMany(data);
+
+-----------------------------------------------
+
+mongo dump and restore
+
+nohup mongodump --uri "mongodb://<username>:<password>@<hostname>:27017/?authSource=<db>&tls=true" \
+          --collection dummy_cv_do_not_use_1_1_0 \
+          --db <dbname> \
+          --out /root/dump \
+          > /root/dump/dump.log 2>&1 &
+
+nohup mongodump --uri "mongodb://<username>:<password>@<hostname>:27017/<dbname>?authSource=<dbname>&tls=true" \
+          --collection dummy_cv_do_not_use_1_1_0 \
+          --out /root/madhu \
+          > /root/madhu/dump.log 2>&1 &          
